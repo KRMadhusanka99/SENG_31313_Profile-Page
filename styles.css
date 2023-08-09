@@ -5,6 +5,9 @@
 h1,h2,h3,h4,h5{
     font-family: "Poppins", sans-serif;
 }
+li{
+    list-style: none;
+}
 a{
     text-decoration: none;
     font-family: "Poppins", sans-serif;
@@ -41,7 +44,7 @@ div.header__description{
     width: 100%;
 }
 .section__title{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(11, 212, 231);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -51,16 +54,30 @@ div.header__description{
     max-height: 0;
     overflow: hidden;
     transition: max-heigh 4.4s ease-in-out; 
+    width: 100vw;
 }
 .section.active .section__description{
     max-height: max-content;
-    animation: fade 1s ease-in-out;
+    animation: fade .5s ease-in-out;
+    width: max-content;
 }
 .section.active svg{
     transform: rotate(180deg);
 }
 svg{
     transition: transform 0.5s ease-in;
+}
+.scroll__up{
+    margin-top: 20px;
+    text-align: right;
+    height: 100px;
+}
+.scroll__up i {
+    border: 1px solid rgb(60, 49, 49);
+    border-radius: 5px;
+}
+.scroll__up i:hover{
+    background: #61ceed;
 }
 @keyframes fade {
     from{
@@ -98,13 +115,19 @@ svg{
   }
   
   /* For medium devices */
-  @media screen and (max-width: 942px) {
+  @media screen and (max-width: 1096px) {
     body{
         padding: 10px 20px;
     }
   }
+
+  @media screen and (max-width: 732px) {
+    h4{
+        font-size: small;
+    }
+  }
   
-  @media screen and (max-width: 585px) {
+  @media screen and (max-width: 622px) {
     .button__grid{
         display: inline;
         margin: 0 auto;
@@ -113,6 +136,12 @@ svg{
         display: grid;
         grid-template-columns: repeat(2);
         row-gap: 0.5rem;
+    }
+    h1{
+        font-size: medium;
+    }
+    h4{
+        font-size:x-small;
     }
   }
 
